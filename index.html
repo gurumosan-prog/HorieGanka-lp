@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ほりえ眼科｜千歳市信濃｜千歳のまちで見守る、目のホームドクター。</title>
+<meta name="description" content="千歳市信濃にあるほりえ眼科。眼領域の一次診療から白内障手術・緑内障手術などの日帰り手術まで、早朝7:30から対応する地域密着の眼科です。">
+<style>
+:root{
+  --brown-900:#3e2a1c;
+  --brown-700:#5c3d28;
+  --brown-500:#8a6040;
+  --brown-300:#c9a883;
+  --brown-100:#f5ede3;
+  --white:#ffffff;
+  --yellow:#f2b705;
+  --yellow-dark:#d99f00;
+  --text:#3a2e25;
+  --line:#e6d9c8;
+  --header-h:84px;
+  --wood:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 2px,rgba(0,0,0,.05) 2px 5px,rgba(255,255,255,.03) 5px 11px,rgba(0,0,0,.04) 11px 14px),
+    linear-gradient(180deg,#7a5234,#5c3d28 60%,#6b4630);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px)}
+body{
+  margin:0;
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.85;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;line-height:1.5;margin:0}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+
+/* ===== Header ===== */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--white);
+  border-bottom:4px solid var(--brown-700);
+  box-shadow:0 2px 10px rgba(62,42,28,.12);
+}
+.site-header::after{
+  content:"";position:absolute;left:0;right:0;bottom:-8px;height:4px;background:var(--yellow);
+}
+.header-inner{
+  width:min(1200px,96%);margin-inline:auto;min-height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;gap:14px;padding:6px 0;
+}
+.brand{display:flex;flex-direction:column;line-height:1.35;text-decoration:none}
+.brand-name{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:1.5rem;font-weight:700;color:var(--brown-900);letter-spacing:.08em}
+.brand-sub{font-size:.76rem;color:var(--brown-500)}
+.header-contact{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.header-tel{
+  display:flex;flex-direction:column;align-items:center;text-decoration:none;
+  background:var(--yellow);color:var(--brown-900);
+  padding:5px 16px;border-radius:8px;font-weight:700;line-height:1.3;
+  border-bottom:3px solid var(--yellow-dark);
+}
+.header-tel small{font-size:.68rem;font-weight:600}
+.header-tel span{font-size:1.2rem;letter-spacing:.03em}
+.sns-links{display:flex;gap:6px}
+.sns-links a{
+  text-decoration:none;font-size:.78rem;font-weight:700;
+  padding:7px 12px;border-radius:999px;
+  border:2px solid var(--brown-500);color:var(--brown-700);background:var(--white);
+  white-space:nowrap;
+}
+.sns-links a:hover{background:var(--brown-100)}
+.sns-links a.line-link{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  line-height:1.25;padding:4px 14px;border-radius:14px;
+}
+.sns-links a.line-link small{font-size:.62rem;font-weight:700;letter-spacing:.04em}
+.top-link{font-size:.72rem;color:var(--brown-500);text-decoration:underline;white-space:nowrap}
+
+/* ===== Common ===== */
+main{padding-top:calc(var(--header-h) + 8px)}
+section{padding:84px 0}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head .en{
+  display:block;font-size:.8rem;letter-spacing:.3em;color:var(--brown-500);font-weight:700;margin-bottom:6px;
+}
+.sec-head h2{font-size:clamp(1.55rem,3.4vw,2.1rem);color:var(--brown-900);letter-spacing:.06em}
+.sec-head h2::after{
+  content:"";display:block;width:64px;height:5px;margin:16px auto 0;border-radius:3px;
+  background:var(--yellow);
+}
+.sec-lead{text-align:center;max-width:680px;margin:-18px auto 40px;color:var(--brown-700)}
+.bg-cream{background:var(--brown-100)}
+
+/* ===== Buttons ===== */
+.btn-tel{
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+  text-decoration:none;background:var(--yellow);color:var(--brown-900);
+  padding:16px 44px;border-radius:12px;font-weight:700;line-height:1.4;
+  border-bottom:5px solid var(--yellow-dark);
+  box-shadow:0 6px 16px rgba(62,42,28,.2);
+  transition:transform .15s ease;
+}
+.btn-tel:hover{transform:translateY(-2px)}
+.btn-tel small{font-size:.82rem}
+.btn-tel strong{font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:.05em}
+.btn-note{font-size:.8rem;margin-top:10px}
+
+/* ===== Hero ===== */
+.hero{padding:0;background:var(--brown-100)}
+.hero-visual{position:relative;min-height:min(78vh,640px);overflow:hidden;background:var(--brown-700)}
+.hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(62,42,28,.55) 0%,rgba(62,42,28,.15) 45%,rgba(62,42,28,.5) 100%);
+}
+.hero-copy{
+  position:relative;z-index:2;min-height:inherit;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  text-align:center;padding:56px 16px 40px;color:var(--white);
+}
+.hero-name{
+  font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;letter-spacing:.14em;
+  text-shadow:0 2px 12px rgba(0,0,0,.45);
+}
+.hero-catch{
+  margin-top:14px;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:clamp(1.05rem,2.8vw,1.75rem);font-weight:600;letter-spacing:.1em;
+  text-shadow:0 2px 10px rgba(0,0,0,.5);
+  padding:6px 22px;border-top:2px solid var(--yellow);border-bottom:2px solid var(--yellow);
+}
+.hero-badges{
+  position:absolute;z-index:2;left:0;right:0;bottom:28px;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:0 12px;
+}
+.hero-badges li{
+  background:rgba(255,255,255,.93);color:var(--brown-900);
+  border-left:5px solid var(--yellow);
+  padding:6px 16px;border-radius:6px;font-size:.88rem;font-weight:700;
+}
+.hero-strip{
+  background:var(--wood);color:var(--white);text-align:center;padding:22px 16px;
+}
+.hero-strip p{font-size:clamp(.95rem,2.2vw,1.1rem);letter-spacing:.05em}
+.hero-strip b{color:var(--yellow)}
+
+/* ===== Worries ===== */
+.worry-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.worry-card,.worry-photo{
+  border-radius:14px;min-height:240px;overflow:hidden;
+  box-shadow:0 4px 12px rgba(92,61,40,.07);
+}
+.worry-card{
+  background:var(--white);border:2px solid var(--line);
+  padding:26px 22px;display:flex;flex-direction:column;justify-content:center;
+}
+.worry-card .tag{
+  align-self:flex-start;background:var(--brown-700);color:var(--white);
+  font-size:.76rem;font-weight:700;letter-spacing:.1em;padding:2px 14px;border-radius:999px;margin-bottom:14px;
+}
+.worry-card ul li{
+  position:relative;padding:6px 0 6px 30px;font-weight:700;color:var(--brown-900);
+}
+.worry-card ul li::before{
+  content:"";position:absolute;left:0;top:.72em;width:18px;height:18px;border-radius:50%;
+  background:var(--yellow);box-shadow:inset 0 0 0 4px var(--yellow),inset 0 0 0 6px var(--brown-700);
+}
+.worry-card ul li small{font-weight:400;color:var(--brown-500);font-size:.84rem}
+.worry-photo{background:var(--wood);border:2px solid var(--brown-300);margin:0}
+.worry-photo img{width:100%;height:100%;min-height:240px;object-fit:cover}
+.worry-msg{
+  margin-top:40px;text-align:center;background:var(--white);border-radius:14px;
+  padding:26px 22px;border:2px dashed var(--brown-300);
+}
+.worry-msg p{color:var(--brown-700)}
+.worry-msg strong{color:var(--brown-900)}
+
+/* ===== Services ===== */
+#service{
+  background:
+    linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.86)),
+    url("images/gazou4.png") center / cover no-repeat;
+  background-color:var(--white);
+}
+.target-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-bottom:44px}
+.target-card{
+  background:var(--white);border:2px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 12px rgba(92,61,40,.07);
+}
+.target-card h3{
+  background:var(--wood);color:var(--white);font-size:1.1rem;padding:14px 18px;letter-spacing:.06em;
+  border-bottom:4px solid var(--yellow);
+}
+.target-card p{padding:18px;font-size:.95rem}
+.menu-title{
+  text-align:center;font-size:1.25rem;color:var(--brown-900);margin-bottom:20px;
+}
+.menu-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.menu-list li{
+  background:var(--brown-100);border-left:6px solid var(--yellow);
+  padding:16px 18px;border-radius:8px;font-weight:700;color:var(--brown-900);
+}
+.note{font-size:.84rem;color:var(--brown-500);margin-top:18px;text-align:center}
+
+/* ===== Reserve ===== */
+.reserve-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:28px;align-items:stretch}
+.reserve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.reserve-more{margin-top:16px;text-align:center;font-size:.92rem;color:var(--brown-700)}
+.reserve-more a{color:var(--brown-700);font-weight:700;word-break:break-all}
+.reserve-photo{
+  margin:0;border-radius:14px;overflow:hidden;border:2px solid var(--brown-300);
+  background:var(--wood);box-shadow:0 4px 12px rgba(92,61,40,.07);
+}
+.reserve-photo img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.reserve-card{
+  background:var(--white);border:2px solid var(--line);border-radius:14px;padding:28px 22px;text-align:center;
+  box-shadow:0 4px 12px rgba(92,61,40,.07);
+}
+.reserve-card h3{font-size:1.15rem;color:var(--brown-900);margin-bottom:10px}
+.reserve-card .step{
+  display:inline-block;background:var(--brown-700);color:var(--white);
+  font-size:.78rem;font-weight:700;padding:2px 14px;border-radius:999px;margin-bottom:12px;
+}
+.reserve-card a.text-link{
+  display:inline-block;margin-top:14px;font-weight:700;color:var(--brown-700);
+  border-bottom:3px solid var(--yellow);text-decoration:none;padding-bottom:2px;
+}
+.caution{
+  margin-top:30px;background:#fff8e1;border:2px solid var(--yellow);border-radius:12px;
+  padding:20px 24px;text-align:center;color:var(--brown-900);font-weight:700;
+}
+
+/* ===== Clinic ===== */
+.clinic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.clinic-photo{
+  margin:0;border-radius:14px;overflow:hidden;border:2px solid var(--brown-300);
+  background:var(--wood);box-shadow:0 4px 12px rgba(92,61,40,.07);aspect-ratio:4 / 3;
+}
+.clinic-photo img{width:100%;height:100%;object-fit:cover}
+
+/* ===== Info ===== */
+.info-table{width:100%;border-collapse:collapse;background:var(--white);border:2px solid var(--brown-300);border-radius:12px;overflow:hidden}
+.info-table th,.info-table td{padding:18px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.info-table th{
+  width:200px;background:var(--brown-700);color:var(--white);font-weight:700;
+  border-bottom:1px solid var(--brown-500);
+}
+.info-table tr:last-child th,.info-table tr:last-child td{border-bottom:none}
+.info-table td a{color:var(--brown-700);font-weight:700}
+.info-table .sub{display:block;font-size:.85rem;color:var(--brown-500);margin-top:4px}
+.hours-list li{display:flex;gap:14px;flex-wrap:wrap}
+.hours-list b{min-width:3em;color:var(--brown-900)}
+
+/* ===== Access ===== */
+.access-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.access-card{
+  background:var(--white);border:2px solid var(--line);border-radius:14px;padding:28px 24px;
+  box-shadow:0 4px 12px rgba(92,61,40,.07);
+}
+.access-card h3{
+  font-size:1.1rem;color:var(--brown-900);margin-bottom:10px;padding-left:12px;border-left:6px solid var(--yellow);
+}
+.access-card p+p{margin-top:8px}
+.access-address{
+  text-align:center;margin-bottom:28px;font-size:1.1rem;font-weight:700;color:var(--brown-900);
+}
+.access-link{text-align:center;margin-top:28px}
+.btn-line{
+  display:inline-block;text-decoration:none;font-weight:700;
+  padding:12px 30px;border-radius:999px;border:2px solid var(--brown-700);color:var(--brown-700);background:var(--white);
+}
+.btn-line:hover{background:var(--brown-100)}
+
+/* ===== CTA ===== */
+.cta{background:var(--wood);color:var(--white);text-align:center}
+.cta .sec-head h2{color:var(--white)}
+.cta .sec-head .en{color:var(--brown-300)}
+.cta p.lead{max-width:620px;margin:-14px auto 30px}
+.cta-sns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+.cta-sns a{
+  text-decoration:none;font-weight:700;font-size:.92rem;
+  padding:10px 24px;border-radius:999px;background:var(--white);color:var(--brown-700);
+  border:2px solid var(--white);
+}
+.cta-sns a:hover{background:var(--brown-100)}
+.cta .top-return{display:inline-block;margin-top:28px;color:var(--brown-300);font-size:.9rem}
+
+/* ===== Footer ===== */
+.site-footer{background:var(--brown-900);color:var(--brown-300);text-align:center;padding:34px 16px;font-size:.88rem}
+.site-footer .f-name{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:1.3rem;color:var(--white);letter-spacing:.12em;margin-bottom:6px}
+.site-footer a{color:var(--brown-300)}
+.footer-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.site-footer .copy{margin-top:14px}
+
+/* ===== Responsive ===== */
+@media (max-width:900px){
+  :root{--header-h:120px}
+  .header-inner{flex-direction:column;align-items:stretch;gap:6px;padding:8px 0}
+  .brand{flex-direction:row;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .header-contact{justify-content:space-between}
+  .header-tel{flex-direction:row;gap:8px;padding:5px 12px}
+  .header-tel small{display:none}
+  .header-tel span{font-size:1.05rem}
+  .top-link{display:none}
+  .reserve-layout{grid-template-columns:1fr}
+  .reserve-photo img{height:auto;max-height:360px}
+  .worry-list{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .worry-card,.worry-photo,.worry-photo img{min-height:200px}
+}
+@media (max-width:640px){
+  :root{--header-h:132px}
+  section{padding:60px 0}
+  .brand-sub{font-size:.68rem}
+  .brand-name{font-size:1.25rem}
+  .sns-links a{padding:6px 10px;font-size:.72rem}
+  .sns-links a.line-link{padding:3px 10px}
+  .info-table th,.info-table td{display:block;width:100%}
+  .info-table th{border-bottom:none}
+  .hero-visual{min-height:520px}
+  .worry-list{grid-template-columns:1fr}
+  .worry-card,.worry-photo,.worry-photo img{min-height:200px}
+  .btn-tel{padding:14px 26px;width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn-tel{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ヘッダー（固定） ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../../../" aria-label="トップページへ戻る">
+      <span class="brand-name">ほりえ眼科</span>
+      <span class="brand-sub">千歳市信濃４丁目４番地１号</span>
+    </a>
+    <div class="header-contact">
+      <a class="header-tel" href="tel:05030855926">
+        <small>お電話でのご予約・ご相談</small>
+        <span>050-3085-5926</span>
+      </a>
+      <nav class="sns-links" aria-label="SNS・LINE">
+        <a href="https://www.instagram.com/horie.eye.clinic?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/people/%E3%81%BB%E3%82%8A%E3%81%88%E7%9C%BC%E7%A7%91/100085046003049/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="line-link" href="https://line.me/R/ti/p/@445ypkpk" target="_blank" rel="noopener noreferrer"><small>お問い合わせ</small><span>LINE</span></a>
+      </nav>
+      <a class="top-link" href="../../../">トップページへ戻る</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 1. ファーストビュー ===== -->
+<section class="hero" id="top" aria-label="ファーストビュー">
+  <div class="hero-visual">
+    <img src="images/hero.png" alt="ほりえ眼科のイメージ">
+    <div class="hero-copy">
+      <h1 class="hero-name">ほりえ眼科</h1>
+      <p class="hero-catch">千歳のまちで見守る、目のホームドクター。</p>
+    </div>
+    <ul class="hero-badges">
+      <li>午前 7:30から診療</li>
+      <li>眼の一次診療</li>
+      <li>日帰り手術にも対応</li>
+    </ul>
+  </div>
+  <div class="hero-strip">
+    <p>日常の目のトラブルから手術まで、<b>早朝から柔軟に対応</b>する地域密着の眼科です。</p>
+  </div>
+</section>
+
+<!-- ===== 2. お悩みセクション ===== -->
+<section class="bg-cream" id="worry">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">WORRIES</span>
+      <h2>こんなお悩みはありませんか？</h2>
+    </div>
+    <div class="worry-list">
+      <article class="worry-card">
+        <span class="tag">お悩み 1</span>
+        <ul>
+          <li>最近、視力が落ちてきた</li>
+          <li>目がかすむ・ぼやける</li>
+        </ul>
+      </article>
+      <figure class="worry-photo"><img src="images/gazou1.png" alt="" loading="lazy"></figure>
+      <article class="worry-card">
+        <span class="tag">お悩み 2</span>
+        <ul>
+          <li>視界に黒い点や糸が浮いている<small>（飛蚊症）</small></li>
+          <li>白内障・緑内障が心配</li>
+        </ul>
+      </article>
+      <figure class="worry-photo"><img src="images/gazou2.png" alt="" loading="lazy"></figure>
+      <article class="worry-card">
+        <span class="tag">お悩み 3</span>
+        <ul>
+          <li>ドライアイで悩んでいる</li>
+          <li>近視が気になる</li>
+        </ul>
+      </article>
+      <figure class="worry-photo"><img src="images/gazou3.png" alt="" loading="lazy"></figure>
+    </div>
+    <div class="worry-msg">
+      <p><strong>小さな違和感でも、どうぞお気軽にご相談ください。</strong><br>
+      お悩みに寄り添いながら、わかりやすくご説明することを大切にしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. 診療案内 ===== -->
+<section id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">SERVICE</span>
+      <h2>診療案内</h2>
+    </div>
+    <p class="sec-lead">日々の目の気になることから、手術が必要な場合まで。まずはお気軽にご相談ください。</p>
+
+    <div class="target-grid">
+      <article class="target-card">
+        <h3>どなたでも</h3>
+        <p>お子さまから高齢の方まで、年齢を問わず、眼に関するお悩みをご相談いただけます。</p>
+      </article>
+      <article class="target-card">
+        <h3>白内障が気になる方</h3>
+        <p>水晶体再建術（白内障手術）に対応しています。見えにくさが気になる方は、まずはご相談ください。</p>
+      </article>
+      <article class="target-card">
+        <h3>緑内障が気になる方</h3>
+        <p>緑内障手術に対応しています。気になる症状や不安なことがありましたら、お話をお聞かせください。</p>
+      </article>
+      <article class="target-card">
+        <h3>近視が気になる方</h3>
+        <p>見え方のお悩みについて、診察のうえでご相談をお受けします。</p>
+      </article>
+    </div>
+
+    <h3 class="menu-title">診療内容</h3>
+    <ul class="menu-list">
+      <li>眼領域の一次診療</li>
+      <li>硝子体手術</li>
+      <li>水晶体再建術（白内障手術）</li>
+      <li>緑内障手術</li>
+      <li>網膜光凝固術（網膜剥離手術）</li>
+    </ul>
+    <p class="note">症状や状態には個人差があります。詳しくは診察時にご説明いたします。</p>
+  </div>
+</section>
+
+<!-- ===== 4. ご予約について ===== -->
+<section class="bg-cream" id="reserve">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">RESERVATION</span>
+      <h2>ご予約について</h2>
+    </div>
+    <p class="sec-lead">ご予約は、お電話・Web・LINEの3つの方法からお選びいただけます。</p>
+
+    <div class="reserve-layout">
+      <div class="reserve-main">
+    <div class="reserve-grid">
+      <article class="reserve-card">
+        <span class="step">方法 1</span>
+        <h3>お電話</h3>
+        <p>050-3085-5926<br><small>（自動応答電話）</small></p>
+        <a class="text-link" href="tel:05030855926">電話をかける</a>
+      </article>
+      <article class="reserve-card">
+        <span class="step">方法 2</span>
+        <h3>Web予約</h3>
+        <p>ご都合のよい時間に、スマートフォン・パソコンからご予約いただけます。</p>
+        <a class="text-link" href="https://horie-eye.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">Web予約ページを開く</a>
+      </article>
+      <article class="reserve-card">
+        <span class="step">方法 3</span>
+        <h3>LINE予約</h3>
+        <p>普段お使いのLINEから、ご予約いただけます。</p>
+        <a class="text-link" href="https://line.me/R/ti/p/%40485ikdnz?oat__id=2189696" target="_blank" rel="noopener noreferrer">LINE予約を開く</a>
+      </article>
+    </div>
+    <p class="caution">土日祝日は混雑の為、予約外をお断りする場合がございます。</p>
+    <p class="reserve-more">ご予約について、詳しくは公式HP（<a href="https://horie-eye.com/" target="_blank" rel="noopener noreferrer">https://horie-eye.com/</a>）をご覧ください。</p>
+      </div>
+      <figure class="reserve-photo"><img src="images/gazou5.png" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. 院内案内 ===== -->
+<section id="clinic">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">CLINIC</span>
+      <h2>院内案内</h2>
+    </div>
+    <p class="sec-lead">地域の皆さまが、気軽に立ち寄れる眼科を目指しています。</p>
+
+    <div class="clinic-grid">
+      <figure class="clinic-photo"><img src="images/gazou6.png" alt="院内の様子" loading="lazy"></figure>
+      <figure class="clinic-photo"><img src="images/gazou7.png" alt="院内の様子" loading="lazy"></figure>
+      <figure class="clinic-photo"><img src="images/gazou8.png" alt="院内の様子" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. 医院基本情報 ===== -->
+<section class="bg-cream" id="info">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">INFORMATION</span>
+      <h2>医院基本情報</h2>
+    </div>
+    <table class="info-table">
+      <tbody>
+        <tr>
+          <th scope="row">医院名</th>
+          <td>ほりえ眼科</td>
+        </tr>
+        <tr>
+          <th scope="row">院長</th>
+          <td>堀江 幸弘</td>
+        </tr>
+        <tr>
+          <th scope="row">所在地</th>
+          <td>千歳市信濃４丁目４番地１号</td>
+        </tr>
+        <tr>
+          <th scope="row">診療時間</th>
+          <td>
+            <ul class="hours-list">
+              <li><b>午前</b><span>7:30～11:30</span></li>
+              <li><b>午後</b><span>15:00～17:00</span></li>
+            </ul>
+            <span class="sub">※土日祝日は混雑の為、予約外をお断りする場合がございます。</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">休診日</th>
+          <td>水曜・土曜午後・日曜午後・祝日午後</td>
+        </tr>
+        <tr>
+          <th scope="row">診療内容</th>
+          <td>眼領域の一次診療／硝子体手術／水晶体再建術（白内障手術）／緑内障手術／網膜光凝固術（網膜剥離手術）</td>
+        </tr>
+        <tr>
+          <th scope="row">電話番号</th>
+          <td><a href="tel:05030855926">050-3085-5926</a><span class="sub">（自動応答電話）</span></td>
+        </tr>
+        <tr>
+          <th scope="row">駐車場</th>
+          <td>有（駐車スペースが限られており(6～10台)混雑時は縦列駐車をお願いしております。ご協力お願い致します。）</td>
+        </tr>
+        <tr>
+          <th scope="row">ご予約方法</th>
+          <td>電話（050-3085-5926）／Web予約／LINE予約</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 7. アクセス ===== -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">ACCESS</span>
+      <h2>アクセス</h2>
+    </div>
+    <p class="access-address">千歳市信濃４丁目４番地１号</p>
+
+    <div class="access-grid">
+      <article class="access-card">
+        <h3>バスをご利用の場合</h3>
+        <p>勇舞空港線⑯（千歳相互観光バス・道南バス）</p>
+        <p>「信濃4丁目」バス停下車 徒歩1分</p>
+      </article>
+      <article class="access-card">
+        <h3>徒歩の場合</h3>
+        <p>千歳駅・長都駅から約25分</p>
+      </article>
+      <article class="access-card">
+        <h3>お車の場合</h3>
+        <p>駐車場あり（6～10台）</p>
+        <p>混雑時は縦列駐車をお願いしております。</p>
+      </article>
+    </div>
+
+    <p class="access-link">
+      <a class="btn-line" href="https://horie-eye.com/%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9/" target="_blank" rel="noopener noreferrer">公式サイトのアクセスページを見る</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== 8. お問い合わせCTA ===== -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">CONTACT</span>
+      <h2>まずはお気軽にご連絡ください</h2>
+    </div>
+    <p class="lead">目のことで気になることがありましたら、お電話でご相談ください。千歳のまちで、あなたの目を見守ります。</p>
+    <a class="btn-tel" href="tel:05030855926">
+      <small>お電話でのご予約・お問い合わせ</small>
+      <strong>050-3085-5926</strong>
+    </a>
+    <p class="btn-note">自動応答電話／午前 7:30～11:30・午後 15:00～17:00</p>
+
+    <div class="cta-sns">
+      <a href="https://www.instagram.com/horie.eye.clinic?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+      <a href="https://www.facebook.com/people/%E3%81%BB%E3%82%8A%E3%81%88%E7%9C%BC%E7%A7%91/100085046003049/" target="_blank" rel="noopener noreferrer">Facebookを見る</a>
+      <a href="https://line.me/R/ti/p/@445ypkpk" target="_blank" rel="noopener noreferrer">LINEで友だち追加</a>
+    </div>
+    <a class="top-return" href="../../../">トップページへ戻る</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== フッター ===== -->
+<footer class="site-footer">
+  <p class="f-name">ほりえ眼科</p>
+  <p>千歳市信濃４丁目４番地１号　TEL：050-3085-5926（自動応答電話）</p>
+  <div class="footer-links">
+    <a href="../../../">トップページへ戻る</a>
+    <a href="https://horie-eye.com/" target="_blank" rel="noopener noreferrer">公式サイト</a>
+  </div>
+  <p class="copy">&copy; ほりえ眼科</p>
+</footer>
+
+</body>
+</html>
